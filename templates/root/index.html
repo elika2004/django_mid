@@ -565,7 +565,7 @@
               }
             }
           </script>
-          {% for test in testimonial %}
+          {% for test in testimonials %}
           <div class="swiper-wrapper">
             
             <div class="swiper-slide">
@@ -573,11 +573,11 @@
                 <div class="stars">
                   <iclass="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
                 </div>
-                <p>{{test.contact}} </p>
+                <p>{{test.user}} </p>
                 <div class="profile mt-auto">
-                  <img src="{% static 'assets/img/testimonials/testimonials-1.jpg' %}" class="testimonial-img" alt="">
-                  <h3>{{test.user}}</h3>
-                  <h4>{{test.image}}</h4>
+                  <img {{test.image}}>
+                  <h3>{{test.contact}}</h3>
+                  <h4></h4>
                 </div>
               </div>
             </div><!-- End testimonial item -->
