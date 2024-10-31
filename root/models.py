@@ -6,7 +6,7 @@ class User(models.Model):
     firt_name=models.CharField( max_length=100)
     last_name=models.CharField(max_length=100)
     email=models.EmailField( max_length=254)
-    status=models.BooleanField(default=False)
+    status=models.BooleanField()
 
     def __str__(self):
         return self.username
@@ -19,24 +19,34 @@ class Testimonials(models.Model):
 class Pros(models.Model):
     title=models.CharField( max_length=50)
     status=models.BooleanField(default=False) 
+    def __str__(self):
+        return self.title
 
 
 class Prices(models.Model):
     title=models.CharField( max_length=50)
     price=models.IntegerField()
     pros=models.ManyToManyField(Pros)
-    status=models.BooleanField(default=False) 
+    status=models.BooleanField(default=False)
+    def __str__(self):
+        return self.title 
 
 class FQA(models.Model):
      title=models.CharField( max_length=50)
      answer=models.CharField( max_length=50)
+     def __str__(self):
+        return self.title
 
 class Services(models.Model):
      title=models.CharField( max_length=50)
-     desc=models.CharField( max_length=50)
+     desc=models.TextField()
      status=models.BooleanField(default=False) 
+     def __str__(self):
+         return self.title
 
 class Services_two(models.Model):
      title=models.CharField( max_length=50)
-     desc=models.CharField( max_length=50)
+     desc=models.TextField()
      status=models.BooleanField(default=False) 
+     def __str__(self):
+         return self.title

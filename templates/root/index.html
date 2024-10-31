@@ -49,12 +49,12 @@
 
       <nav id="navmenu" class="navmenu">
         <ul>
-          <li><a href="index.html#hero" class="active">Home</a></li>
-          <li><a href="index.html#about">About</a></li>
-          <li><a href="index.html#features">Features</a></li>
-          <li><a href="index.html#services">Services</a></li>
-          <li><a href="index.html#pricing">Pricing</a></li>
-          <li><a href="index.html#contact">Contact</a></li>
+          <li><a href="#hero" class="active">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#features">Features</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#pricing">Pricing</a></li>
+          <li><a href="#contact">Contact</a></li>
         </ul>
         <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
       </nav>
@@ -87,21 +87,40 @@
     <section id="featured-services" class="featured-services section light-background">
 
       <div class="container">
-       
+
         <div class="row gy-4">
-          {% for service in services %}
+
           <div class="col-xl-4 col-lg-6" data-aos="fade-up" data-aos-delay="100">
             <div class="service-item d-flex">
               <div class="icon flex-shrink-0"><i class="bi bi-briefcase"></i></div>
               <div>
-                <h4 class="title"><a href="#" class="stretched-link">{{service.title}}</a></h4>
-                <p class="description">{{service.desc}}</p>
+                <h4 class="title"><a href="#" class="stretched-link">Lorem Ipsum</a></h4>
+                <p class="description">Voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi</p>
               </div>
             </div>
           </div>
           <!-- End Service Item -->
-          {% endfor %}
+          
 
+          <div class="col-xl-4 col-lg-6" data-aos="fade-up" data-aos-delay="200">
+            <div class="service-item d-flex">
+              <div class="icon flex-shrink-0"><i class="bi bi-card-checklist"></i></div>
+              <div>
+                <h4 class="title"><a href="#" class="stretched-link">Dolor Sitema</a></h4>
+                <p class="description">Minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip exa</p>
+              </div>
+            </div>
+          </div><!-- End Service Item -->
+
+          <div class="col-xl-4 col-lg-6" data-aos="fade-up" data-aos-delay="300">
+            <div class="service-item d-flex">
+              <div class="icon flex-shrink-0"><i class="bi bi-bar-chart"></i></div>
+              <div>
+                <h4 class="title"><a href="#" class="stretched-link">Sed ut perspiciatis</a></h4>
+                <p class="description">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum</p>
+              </div>
+            </div>
+          </div><!-- End Service Item -->
 
         </div>
 
@@ -336,75 +355,20 @@
       </div><!-- End Section Title -->
 
       <div class="container">
-
+        {% for srv in services %}
         <div class="row g-5">
 
           <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
             <div class="service-item item-cyan position-relative">
               <i class="bi bi-activity icon"></i>
               <div>
-                <h3>Nesciunt Mete</h3>
-                <p>Provident nihil minus qui consequatur non omnis maiores. Eos accusantium minus dolores iure perferendis tempore et consequatur.</p>
+                <h3>{{srv.title}}</h3>
+                <p>{{srv.desc}}</p>
                 <a href="#" class="read-more stretched-link">Learn More <i class="bi bi-arrow-right"></i></a>
               </div>
             </div>
           </div><!-- End Service Item -->
-
-          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="200">
-            <div class="service-item item-orange position-relative">
-              <i class="bi bi-broadcast icon"></i>
-              <div>
-                <h3>Eosle Commodi</h3>
-                <p>Ut autem aut autem non a. Sint sint sit facilis nam iusto sint. Libero corrupti neque eum hic non ut nesciunt dolorem.</p>
-                <a href="#" class="read-more stretched-link">Learn More <i class="bi bi-arrow-right"></i></a>
-              </div>
-            </div>
-          </div><!-- End Service Item -->
-
-          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="300">
-            <div class="service-item item-teal position-relative">
-              <i class="bi bi-easel icon"></i>
-              <div>
-                <h3>Ledo Markt</h3>
-                <p>Ut excepturi voluptatem nisi sed. Quidem fuga consequatur. Minus ea aut. Vel qui id voluptas adipisci eos earum corrupti.</p>
-                <a href="#" class="read-more stretched-link">Learn More <i class="bi bi-arrow-right"></i></a>
-              </div>
-            </div>
-          </div><!-- End Service Item -->
-
-          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="400">
-            <div class="service-item item-red position-relative">
-              <i class="bi bi-bounding-box-circles icon"></i>
-              <div>
-                <h3>Asperiores Commodi</h3>
-                <p>Non et temporibus minus omnis sed dolor esse consequatur. Cupiditate sed error ea fuga sit provident adipisci neque.</p>
-                <a href="#" class="read-more stretched-link">Learn More <i class="bi bi-arrow-right"></i></a>
-              </div>
-            </div>
-          </div><!-- End Service Item -->
-
-          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="500">
-            <div class="service-item item-indigo position-relative">
-              <i class="bi bi-calendar4-week icon"></i>
-              <div>
-                <h3>Velit Doloremque.</h3>
-                <p>Cumque et suscipit saepe. Est maiores autem enim facilis ut aut ipsam corporis aut. Sed animi at autem alias eius labore.</p>
-                <a href="#" class="read-more stretched-link">Learn More <i class="bi bi-arrow-right"></i></a>
-              </div>
-            </div>
-          </div><!-- End Service Item -->
-
-          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="600">
-            <div class="service-item item-pink position-relative">
-              <i class="bi bi-chat-square-text icon"></i>
-              <div>
-                <h3>Dolori Architecto</h3>
-                <p>Hic molestias ea quibusdam eos. Fugiat enim doloremque aut neque non et debitis iure. Corrupti recusandae ducimus enim.</p>
-                <a href="#" class="read-more stretched-link">Learn More <i class="bi bi-arrow-right"></i></a>
-              </div>
-            </div>
-          </div><!-- End Service Item -->
-
+          {% endfor %}
         </div>
 
       </div>
@@ -482,12 +446,12 @@
       <div class="container">
 
         <div class="row gy-4">
-
+          {% for price in prices  %}
           <div class="col-lg-4" data-aos="zoom-in" data-aos-delay="100">
             <div class="pricing-item">
-              <h3>Free Plan</h3>
-              <p class="description">Ullam mollitia quasi nobis soluta in voluptatum et sint palora dex strater</p>
-              <h4><sup>$</sup>0<span> / month</span></h4>
+              <h3>{{prices.title}}</h3>
+              <p class="description">{{prices.pros}}</p>
+              <h4><span>{{prices.price }}</span></h4>
               <a href="#" class="cta-btn">Start a free trial</a>
               <p class="text-center small">No credit card required</p>
               <ul>
@@ -501,7 +465,7 @@
               </ul>
             </div>
           </div><!-- End Pricing Item -->
-
+          {% endfor %}
           <div class="col-lg-4" data-aos="zoom-in" data-aos-delay="200">
             <div class="pricing-item featured">
               <p class="popular">Popular</p>
@@ -781,7 +745,7 @@
             <div class="info-item d-flex flex-column justify-content-center align-items-center" data-aos="fade-up" data-aos-delay="400">
               <i class="bi bi-envelope"></i>
               <h3>Email Us</h3>
-              <p>info@example.com</p>
+              <p>info@sitename.com</p>
             </div>
           </div><!-- End Info Item -->
 
